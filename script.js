@@ -19,6 +19,12 @@ function addToList (event){
     toDoList.appendChild(newList);
     toDoInput.value = ""
     console.log(task)
+
+    newList.addEventListener("click", deleteSingleLi)
+
+    function deleteSingleLi(event){
+        event.target.remove()
+    }
 }
 
 function clearList (event){
